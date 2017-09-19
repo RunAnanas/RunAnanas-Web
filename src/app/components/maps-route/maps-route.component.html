@@ -1,0 +1,5 @@
+<ngui-map zoom="8" center="47.322621750564224, 8.586997609999912">
+  <marker *ngIf="racer1State" [position]="racer1State.coordinate.lat + ',' + racer1State.coordinate.lng" [opacity]="0.75" icon="./assets/img/run_blue.png"></marker>
+  <marker *ngIf="racer2State" [position]="racer2State.coordinate.lat + ',' + racer2State.coordinate.lng" [opacity]="0.75" icon="./assets/img/run_orange.png"></marker>
+  <kml-layer url="https://hackzurich17.firebaseapp.com/#/assets/kml/zurich2014-edited.kml"></kml-layer>
+</ngui-map>

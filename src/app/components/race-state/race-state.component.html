@@ -1,0 +1,7 @@
+<div *ngIf="raceState">
+  <div class="race-time">
+    <i class="fa fa-fast-backward" aria-hidden="true" (click)="onTimeTravel.emit(-1 * timeTravelStep)"></i>
+    <span>{{raceState.duration | racetime }}</span>
+    <i class="fa fa-fast-forward" aria-hidden="true" (click)="onTimeTravel.emit(timeTravelStep)"></i>
+  </div>
+</div>

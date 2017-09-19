@@ -1,0 +1,17 @@
+.runner-lane, .runner-animaton {
+    height: 90px;
+}
+
+.runner-lane {
+    overflow: hidden;
+    padding-bottom: -10px;
+    border-bottom: solid 7px gray;
+}
+
+.runner-lane.runner1 {
+    border-bottom-color: #0062CF;    
+}
+
+.runner-lane.runner2 {
+    border-bottom-color: #FF5900;
+}

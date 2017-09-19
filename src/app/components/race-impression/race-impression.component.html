@@ -1,0 +1,3 @@
+<div class="impressions" *ngIf="raceState">
+  <img *ngFor="let image of images" [src]="image.path" [class.shown]="image.distance <= raceState.distance" />
+</div>

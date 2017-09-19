@@ -1,0 +1,19 @@
+<section class="race-viz">
+  <section class="lanes">
+    <div class="lanes-wrap">
+      <app-race-runner-lane [raceState]="racer1State$ | async" runner="runner1"></app-race-runner-lane>
+      <app-race-runner-lane [raceState]="racer2State$ | async" runner="runner2"></app-race-runner-lane>
+    </div>
+  </section>
+  <section class="main-visualization">
+    <app-runner-state class="left runner1" [raceState]="racer1State$ | async"></app-runner-state>
+    <app-runner-state class="right runner2" [raceState]="racer2State$ | async"></app-runner-state>
+    <app-race-state [raceState]="raceState" (onTimeTravel)="timeTravel($event)"></app-race-state>
+    <app-maps-route [racer1State]="racer1StateDebounced$ | async" [racer2State]="racer2State$ | async"></app-maps-route>
+    <div class="streetview-wrapper">
+      <app-street-view [raceState]="racer1StateDebounced$ | async"></app-street-view>
+    </div>
+    <app-race-impression [raceState]="racer1State$ | async"></app-race-impression>
+  </section>
+
+</section>

@@ -1,0 +1,18 @@
+.impressions img {
+    max-width: 360px;
+    position: absolute;
+    right: -600px;
+    top: 400px;
+    transition: 200ms ease-in;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);    
+}
+
+.impressions img.shown {
+    right: 40px;
+}
+
+
+img { transform: rotate(2.75deg); }
+img:nth-child(2n) { transform: none; }
+img:nth-child(3n) { transform: rotate(-2.5deg); }
+img:nth-child(5n) { transform: scale(1.1); }

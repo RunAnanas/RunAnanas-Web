@@ -1,0 +1,6 @@
+<div class="runner-lane" [ngClass]="runner" *ngIf="raceState">
+  <div class="wrapper" [style.transform]="'translateX(' + percentageComplete(raceState) +'%)'">
+    <img class="runner-animaton" src="https://i.giphy.com/media/21xvtjuA9cHni/source.gif" onerror="this.onerror=null;this.src='https://i.giphy.com/21xvtjuA9cHni.gif';"
+      alt="">
+  </div>
+</div>

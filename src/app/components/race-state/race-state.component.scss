@@ -1,0 +1,19 @@
+.race-time {
+    text-align: center;
+    font-family: 'Oxygen Mono', monospace;   
+    color: #555;
+    font-size: 6em;
+    min-height: 130px;
+    position: relative;
+    top: 200px;
+    
+    .fa {
+        opacity: 0;
+        transition: 0.4s linear;
+        cursor: pointer;
+    }
+
+    .fa:hover {
+        opacity: 1;
+    }
+}

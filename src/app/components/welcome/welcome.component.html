@@ -1,0 +1,27 @@
+<div class="picker-wrapper" [class.searched]="searchResults && searchResults.length > 0">
+  <div class="huge">Pick Your</div>
+  <div class="huge">Competition:</div>
+  <div class="searchbox">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search By Name" />
+    <button md-raised-button (click)="searchResultsByName()">Find</button>
+  </div>
+
+  <div *ngIf="searchResults && searchResults.length === 0">No Matches Found</div>
+
+  <table *ngIf="searchResults && searchResults.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Rank</th>
+        <th>Finish Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of searchResults" (click)="selectCompetition(r)">
+        <td>{{r.name}} {{r.surname}}</td>
+        <td>{{r.overallrank}}</td>
+        <td>{{r.racetime}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

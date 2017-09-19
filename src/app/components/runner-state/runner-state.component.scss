@@ -1,0 +1,42 @@
+:host {
+    display: block;
+    position: absolute;
+    color: white;
+    width: 240px;
+    height: 240px;
+    font-size: 2.75em;
+    top: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    .name {
+        margin-bottom: 20px;
+    }
+
+    .label {
+        font-size: 20px;
+    }
+
+    .state-wrapper {
+        padding: 10px;
+    }
+}
+
+:host.left {
+    border-bottom-right-radius: 100%;
+    left: 0;
+    text-align: left;
+}
+
+:host.right {
+    border-bottom-left-radius: 100%;
+    right: 0;
+    text-align: right;
+}
+
+:host.runner2 {
+    background-color: #FF5900;    
+}
+
+:host.runner1 {
+    background-color: #0062CF;    
+}
